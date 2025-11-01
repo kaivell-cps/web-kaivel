@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile Bisnis - Script Bot & Nomor Kosong</title>
+  <style>
+    :root{--accent:#6C5CE7;--bg:#0f1724;--card:#0b1220;--glass:rgba(255,255,255,0.04);--muted:rgba(255,255,255,0.6)}
+    *{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{margin:0;background:#071027 url('https://files.catbox.moe/mzth7o.png') center/cover fixed;color:#eef2ff;}
+    .wrap{max-width:980px;margin:40px auto;padding:24px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:16px;overflow:hidden;flex:0 0 120px;border:3px solid rgba(255,255,255,0.08);background:linear-gradient(135deg,rgba(255,255,255,0.03),transparent)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .title{flex:1}
+    h1{margin:0;font-size:26px;letter-spacing:0.4px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .meta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+    .pill{background:var(--glass);padding:8px 10px;border-radius:10px;font-size:13px}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:22px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    .section-title{font-weight:600;margin-bottom:8px}
+    ul.features{padding-left:18px;margin:8px 0}
+    .price{font-weight:700;font-size:20px}
+
+    .spec-list{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;margin-bottom:10px}
+    .spec-list b{display:inline-block;width:140px}
+
+    .products .prod{border-radius:10px;padding:12px;margin-bottom:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+    .prod h3{margin:0 0 6px}
+    .small{font-size:13px;color:var(--muted)}
+
+    .copy-row{display:flex;gap:8px;align-items:center}
+    button.copy{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:inherit;cursor:pointer}
+    .note{font-size:13px;color:#ffd9d9;background:rgba(255,0,0,0.06);padding:8px;border-radius:8px}
+
+    a.link{display:block;margin:6px 0;color:#aab4ff;text-decoration:none}
+    a.link:hover{text-decoration:underline;color:#fff}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media(max-width:880px){.grid{grid-template-columns:1fr;}.avatar{width:96px;height:96px;flex:0 0 96px}}
+
+    .map{display:flex;gap:10px;align-items:center}
+    .map svg{width:54px;height:54px}
+
+    /* Chat button */
+    .chat-btn{
+      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:none;cursor:pointer;
+      background:linear-gradient(90deg,var(--accent),#8e7bff);color:#fff;font-weight:600;font-size:14px;box-shadow:0 6px 18px rgba(108,92,231,0.12);
+    }
+    .chat-btn:hover{filter:brightness(1.04);transform:translateY(-2px);transition:all .18s ease}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar"><img src="https://files.catbox.moe/4uiw5x.jpg" alt="photo profile"></div>
+      <div class="title">
+        <h1>Nama: <span style="color:var(--accent)">—Kaivel</span></h1>
+        <p class="lead">Bisnis: Jual Script Bot & Nomor Kosong — Lokasi: Riau, Indonesia — Umur: 16</p>
+        <div class="meta">
+          <div class="pill">Umur: 16</div>
+          <div class="pill">Lokasi: Riau, Indonesia</div>
+          <div class="pill">Contact: <span id="phone">082143534970</span></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div>
+        <section class="card">
+          <div class="section-title">Tentang Saya</div>
+          <p class="small">Saya menjual script bot dan nomor kosong untuk keperluan verifikasi. Semua produk dikelola langsung. Detail tiap script dipisah agar jelas.</p>
+
+          <div style="margin-top:12px" class="map card">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.686 2 6 4.686 6 8c0 4.667 6 12 6 12s6-7.333 6-12c0-3.314-2.686-6-6-6z" stroke="#fff" stroke-opacity="0.9" stroke-width="1.2" fill="rgba(108,92,231,0.08)"/><circle cx="12" cy="8" r="2" fill="#fff" opacity="0.95"/></svg>
+            <div>
+              <div style="font-weight:600">Riau, Indonesia</div>
+              <div class="small">Lokasi ditampilkan sebagai penanda. Jika ingin peta nyata, berikan link peta atau izinkan saya menambahkan peta statis.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Produk: v1 -->
+        <section class="card" style="margin-top:12px">
+          <div class="section-title">SC v1 — Oline MD</div>
+          <div class="spec-list">
+            <div><b>Nama Bot</b>: OLINE MD</div>
+            <div><b>Harga</b>: 35.000 IDR</div>
+            <div><b>Environment</b>: Node.js 20</div>
+            <div><b>Fitur</b>: 1,000+ (estimasi)</div>
+            <div><b>Update</b>: Tidak gratis</div>
+            <div style="margin-top:8px"><b>Keterangan</b>: Paket ringan, mudah diedit, cocok untuk pengguna yang butuh dasar bot.</div>
+            <div style="margin-top:10px"><a class="chat-btn" href="https://wa.me/6282143534970" target="_blank">Chat Kaivel</a></div>
+          </div>
+        </section>
+
+        <!-- Produk: v2 -->
+        <section class="card" style="margin-top:12px">
+          <div class="section-title">SC v2 — Michie MD</div>
+          <div class="spec-list">
+            <div><b>Nama Bot</b>: MICHIE MD</div>
+            <div><b>Harga</b>: 50.000 IDR</div>
+            <div><b>Environment</b>: Node.js 20</div>
+            <div><b>Fitur</b>: 1,500+ (estimasi)</div>
+            <div><b>Update</b>: Free Update (auto-update tersedia)</div>
+            <div style="margin-top:8px"><b>Fitur Tambahan</b>: Menu Fun, Downloader, dll.</div>
+            <div style="margin-top:8px"><b>Spesifikasi Lengkap</b>:</div>
+            <ul class="features">
+              <li>Node.js 20</li>
+              <li>Imagemagick</li>
+              <li>FFmpeg</li>
+              <li>RAM Minimum 2GB</li>
+              <li>~1,500 fitur aktif</li>
+              <li>Support auto-update</li>
+              <li>Panel admin & custom prefix</li>
+              <li>Mudah dikustom</li>
+            </ul>
+            <div style="margin-top:10px"><a class="chat-btn" href="https://wa.me/6282143534970" target="_blank">Chat Kaivel</a></div>
+          </div>
+        </section>
+
+        <!-- Produk: v3 -->
+        <section class="card" style="margin-top:12px">
+          <div class="section-title">SC v3 — Erine MD</div>
+          <div class="spec-list">
+            <div><b>Nama Bot</b>: ERINE MD</div>
+            <div><b>Harga</b>: 60.000 IDR</div>
+            <div><b>Environment</b>: Node.js 20</div>
+            <div><b>Fitur</b>: 1,700+ (estimasi)</div>
+            <div><b>Update</b>: Pilihan (opsional)</div>
+            <div style="margin-top:8px"><b>Catatan</b>: Paket lebih lengkap, cocok untuk yang mau fitur ekstra dan plugin lebih banyak.</div>
+            <div style="margin-top:10px"><a class="chat-btn" href="https://wa.me/6282143534970" target="_blank">Chat Kaivel</a></div>
+          </div>
+        </section>
+
+        <!-- Full Script Package (tetap ada) -->
+        <section class="card" style="margin-top:12px">
+          <div class="section-title">Full Script Package</div>
+          <div class="spec-list">
+            <div><b>Nama Bot</b>: CATHERINA VALLENCIA</div>
+            <div><b>VERSION</b>: v2.3.5</div>
+            <div><b>PRICE</b>: 85.000 IDR</div>
+            <div style="margin-top:8px"><b>Fitur Utama</b>:</div>
+            <ul class="features">
+              <li>Downloader</li>
+              <li>Stalker</li>
+              <li>Mini Games</li>
+              <li>Role & Ranked</li>
+              <li>RPG Games, Case Type, Work All</li>
+              <li>Mudah Diedit</li>
+              <li>2500+ Case & Plugins</li>
+              <li>Full Button All</li>
+              <li>BUG Feature & Panel Create</li>
+              <li>Always Free Update (tergantung paket)</li>
+            </ul>
+
+            <div style="margin-top:8px">Requirements:</div>
+            <ul class="features">
+              <li>Node.js 20</li>
+              <li>Imagemagick</li>
+              <li>FFmpeg</li>
+              <li>RAM Minimum 3GB</li>
+            </ul>
+            <div style="margin-top:10px"><a class="chat-btn" href="https://wa.me/6282143534970" target="_blank">Chat Kaivel</a></div>
+          </div>
+        </section>
+
+        <!-- Nomor Kosong -->
+        <section class="card" style="margin-top:12px">
+          <div class="section-title">Nomor Kosong (Nomor OTP)</div>
+          <div class="spec-list">
+            <div><b>Produk</b>: Nomor Kosong Indonesia</div>
+            <div><b>Price</b>: Rp.8.000,00</div>
+            <div><b>Catatan</b>:</div>
+            <ul class="features">
+              <li>OTP 1X (satu kali)</li>
+              <li>Sudah diberi OTP, tidak bisa all-reff</li>
+              <li>Proses: 1–3 menit</li>
+            </ul>
+            <div style="margin-top:10px"><a class="chat-btn" href="https://wa.me/6282143534970" target="_blank">Chat Kaivel</a></div>
+          </div>
+        </section>
+
+        <!-- Tentang Website Ini -->
+        <section class="card" style="margin-top:12px">
+          <div class="section-title">Tentang Website Ini</div>
+          <div class="small">
+            Halaman ini dibuat sederhana dan ringan agar cepat diakses. Teknologi yang digunakan:
+            <ul class="features">
+              <li>HTML5 untuk struktur halaman.</li>
+              <li>CSS (vanilla) untuk styling; tidak menggunakan framework besar agar tetap ringan.</li>
+              <li>JavaScript kecil (vanilla) untuk fitur interaktif: tombol salin (copy) dan perilaku UI sederhana.</li>
+              <li>Asset eksternal: background dan foto profil diambil dari URL yang kamu berikan.</li>
+              <li>Optimisasi: gambar disimpan sebagai file remote, layout responsive, tidak memuat library besar.</li>
+            </ul>
+            Hosting yang cocok: GitHub Pages, Netlify, Vercel, atau hosting statis lainnya. Jika mau, bisa saya kemas jadi .zip siap upload.
+            <div style="margin-top:8px">Catatan aksesibilitas & performa: kontras teks diperhatikan, tombol dapat di-copy, dan halaman responsif untuk mobile.</div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside>
+        <div class="card">
+          <div class="section-title">Payment</div>
+          <p class="small">Silakan pilih metode pembayaran. Nomor di bawah bisa di-copy.</p>
+          <div style="margin-top:8px" class="copy-row">
+            <div style="flex:1">
+              <div class="small">DANA</div>
+              <div class="price">0821 4353 4970</div>
+            </div>
+            <div>
+              <button class="copy" data-copy="082143534970">Copy</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px" class="copy-row">
+            <div style="flex:1">
+              <div class="small">GoPay</div>
+              <div class="price">0821 4353 4970</div>
+            </div>
+            <div>
+              <button class="copy" data-copy="082143534970">Copy</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px" class="note">QRIS: (mati)</div>
+        </div>
+
+        <div class="card" style="margin-top:12px;">
+          <div class="section-title">Kontak Cepat</div>
+          <div class="small">Klik link di bawah untuk menghubungi saya:</div>
+          <a class="link" href="https://www.tiktok.com/@kaivel_fjkt48" target="_blank">TikTok: @kaivel_fjkt48</a>
+          <a class="link" href="https://whatsapp.com/channel/0029VbBCfa27dmeYCSvFmj22" target="_blank">Saluran WhatsApp</a>
+          <a class="link" href="https://wa.me/6282143534970" target="_blank">Chat via WhatsApp</a>
+          <div style="margin-top:8px">
+            <button class="copy" data-copy="082143534970">Salin Nomor</button>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px;text-align:center">
+          <div class="small">Made with ❤️ — umkm script bot</div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>Jika mau saya gabungkan jadi file .zip atau kamu mau ubah tampilan, bilang singkat aja.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('button.copy').forEach(b=>{
+      b.addEventListener('click',async ()=>{
+        const txt=b.getAttribute('data-copy');
+        try{await navigator.clipboard.writeText(txt);b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1200)}catch(e){const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1200)}
+      })
+    })
+  </script>
+</body>
+</html>
